@@ -12,6 +12,8 @@
 		2F35802F2957E4A5008D3936 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 2F35802E2957E4A5008D3936 /* Experience.rcproject */; };
 		2F3580312957E4A6008D3936 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F3580302957E4A6008D3936 /* Assets.xcassets */; };
 		2F3580342957E4A6008D3936 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F3580332957E4A6008D3936 /* Preview Assets.xcassets */; };
+		2F35803C2958D05C008D3936 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35803B2958D05C008D3936 /* ARViewContainer.swift */; };
+		2F35803E2958D062008D3936 /* ARCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35803D2958D062008D3936 /* ARCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		2F3580302957E4A6008D3936 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F3580332957E4A6008D3936 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2F35803A2958053A008D3936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2F35803B2958D05C008D3936 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
+		2F35803D2958D062008D3936 /* ARCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				2F35802A2957E4A5008D3936 /* AppDelegate.swift */,
 				2F35802C2957E4A5008D3936 /* ContentView.swift */,
+				2F35803B2958D05C008D3936 /* ARViewContainer.swift */,
+				2F35803D2958D062008D3936 /* ARCoordinator.swift */,
 				2F35802E2957E4A5008D3936 /* Experience.rcproject */,
 				2F3580302957E4A6008D3936 /* Assets.xcassets */,
 				2F35803A2958053A008D3936 /* Info.plist */,
@@ -143,6 +149,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F35802D2957E4A5008D3936 /* ContentView.swift in Sources */,
+				2F35803C2958D05C008D3936 /* ARViewContainer.swift in Sources */,
+				2F35803E2958D062008D3936 /* ARCoordinator.swift in Sources */,
 				2F35802B2957E4A5008D3936 /* AppDelegate.swift in Sources */,
 				2F35802F2957E4A5008D3936 /* Experience.rcproject in Sources */,
 			);

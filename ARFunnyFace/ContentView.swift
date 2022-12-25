@@ -10,6 +10,7 @@ import RealityKit
 import SwiftUI
 
 var arView: ARView!
+var robot: Experience.Robot!
 
 struct ContentView : View {
   @State var propId: Int = .zero
@@ -45,7 +46,7 @@ struct ContentView : View {
   }
   
   func incrementPropId() {
-    propId = propId >= 2 ? 2 : propId + 1
+    propId = propId >= 3 ? 3 : propId + 1
   }
   
   func takeSnapshot() {
@@ -59,38 +60,7 @@ struct ContentView : View {
   
 }
 
-struct ARViewContainer: UIViewRepresentable {
-  @Binding var propId: Int
-  
-  func makeUIView(context: Context) -> ARView {
-    arView = ARView(frame: .zero)
-    return arView
-  }
-  
-  func updateUIView(_ uiView: ARView, context: Context) {
-    // Remove previous anchors from other scenes
-    arView.scene.anchors.removeAll()
-    
-    let arConfig = ARFaceTrackingConfiguration()
-    uiView.session.run(arConfig, options: [.resetTracking, .removeExistingAnchors])
-    
-    switch(propId) {
-    case 0: // Eyes
-      let arAnchor = try! Experience.loadEyes()
-      uiView.scene.anchors.append(arAnchor)
-      break
-    case 1: // Glasses
-      let arAnchor = try! Experience.loadGlasses()
-      uiView.scene.anchors.append(arAnchor)
-      break
-    case 2: // Mustache
-      let arAnchor = try! Experience.loadMustache()
-      uiView.scene.anchors.append(arAnchor)
-      break
-    default: break
-    }
-  }
-}
+
 
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
