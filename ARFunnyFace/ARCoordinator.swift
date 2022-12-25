@@ -10,6 +10,8 @@ import ARKit
 final class ARCoordinator: NSObject {
   var arViewContainer: ARViewContainer
   
+  var isLasersDone = true
+  
   init(_ control: ARViewContainer) {
     arViewContainer = control
     super.init()
@@ -69,7 +71,19 @@ extension ARCoordinator: ARSessionDelegate {
     
     robot.robotJaw?.orientation = simd_quatf(
       angle: deg2Rad(-100 + (60 * jawOpen!)),
-      axis: [1, 0, 0])
+      axis: [1, 0, 0]
+    )
 
+    // When this value is false, the lasers are currently active and you have to wait for the action sequence to complete before triggering the lasers again.
+    
+    // If the user’s jaw is about 90% open and the lasers aren’t currently active, you can trigger the lasers.
+    if (isLasersDone && jawOpen! > 0.9) {
+      isLasersDone = false
+      
+      robot.notifications.showLasers.post()
+      robot.actions.lasersDone.onAction = { _ in
+        self.isLasersDone = true
+      }
+    }
   }
 }
