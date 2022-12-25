@@ -21,6 +21,7 @@
 		2F35802E2957E4A5008D3936 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		2F3580302957E4A6008D3936 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F3580332957E4A6008D3936 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2F35803A2958053A008D3936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +58,7 @@
 				2F35802C2957E4A5008D3936 /* ContentView.swift */,
 				2F35802E2957E4A5008D3936 /* Experience.rcproject */,
 				2F3580302957E4A6008D3936 /* Assets.xcassets */,
+				2F35803A2958053A008D3936 /* Info.plist */,
 				2F3580322957E4A6008D3936 /* Preview Content */,
 			);
 			path = ARFunnyFace;
@@ -274,7 +276,9 @@
 				DEVELOPMENT_TEAM = 4BP826FJGX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_FILE = ARFunnyFace/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Access required for AR experience";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Access required to save selfies";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
@@ -305,7 +309,9 @@
 				DEVELOPMENT_TEAM = 4BP826FJGX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_FILE = ARFunnyFace/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Access required for AR experience";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Access required to save selfies";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
